@@ -12130,7 +12130,7 @@ Run the code cell below to remove <strong>Survived</strong> as a feature of the 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">accuracy_score</span><span class="p">(</span><span class="n">truth</span><span class="p">,</span> <span class="n">pred</span><span class="p">):</span>
@@ -12163,9 +12163,17 @@ Run the code cell below to remove <strong>Survived</strong> as a feature of the 
 <div class="prompt"></div>
 
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Predictions have an accuracy of 60.00%.
-</pre>
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-1-991f9ad819e1&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-intense-fg ansi-bold">()</span>
+<span class="ansi-green-fg">     12</span> 
+<span class="ansi-green-fg">     13</span> <span class="ansi-red-intense-fg ansi-bold"># Test the &#39;accuracy_score&#39; function</span>
+<span class="ansi-green-intense-fg ansi-bold">---&gt; 14</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>predictions <span class="ansi-yellow-intense-fg ansi-bold">=</span> pd<span class="ansi-yellow-intense-fg ansi-bold">.</span>Series<span class="ansi-yellow-intense-fg ansi-bold">(</span>np<span class="ansi-yellow-intense-fg ansi-bold">.</span>ones<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-cyan-intense-fg ansi-bold">5</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> dtype <span class="ansi-yellow-intense-fg ansi-bold">=</span> int<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-green-fg">     15</span> print<span class="ansi-yellow-intense-fg ansi-bold">(</span>accuracy_score<span class="ansi-yellow-intense-fg ansi-bold">(</span> outcomes<span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-yellow-intense-fg ansi-bold">:</span><span class="ansi-cyan-intense-fg ansi-bold">5</span><span class="ansi-yellow-intense-fg ansi-bold">]</span><span class="ansi-yellow-intense-fg ansi-bold">,</span>predictions<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+
+<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name &#39;pd&#39; is not defined</pre>
 </div>
 </div>
 
@@ -13293,6 +13301,7 @@ Make sure to keep track of the various features and conditions you tried before 
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer</strong>: <em>Predictions have an accuracy of 81.71%.</em></p>
+<p>After adding Age as a condition with Sex increase the accuracy more than alone attribute just using Sex. This let us to watch that  multiple attributes and multiple conditional statements to get more accuracy. You can use the same feature multiple times with different conditions.</p>
 
 </div>
 </div>
@@ -13312,7 +13321,7 @@ Make sure to keep track of the various features and conditions you tried before 
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer</strong>: <em>I think this could be applied by a personel training machine to decide to shoot the ball which the player wants to wait exact place for kicking place. The machine shoot the balls right place with using supervised learning.Without Players the machine have to train with traning data using right place or not. Machine is trained to predict some value like height which player wants to kick ball at </em></p>
+<p><strong>Answer</strong>: <em>I think this could be applied by a personel training machine to decide to shoot the ball which the player wants to wait exact place for kicking place. The machine shoot the balls right place with using supervised learning.Without Players the machine have to train with traning data using right place or not. Machine is trained to predict some value like height which player wants to kick ball at. As you see that there must be alot of attributes to learn to machine how to kick the ball right angle,speed and azimuth. So we can check all times that azimuth, speed and angle must be learn with using supervised learning</em></p>
 
 </div>
 </div>
@@ -13336,3 +13345,4 @@ Make sure to keep track of the various features and conditions you tried before 
 
 
 </html>
+
